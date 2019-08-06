@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
+            
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+             
+              "src/assets/js/jquery.js",
+              "src/assets/js/plugins.js",
+              "src/assets/js/init.js",
+              "./node_modules/particles.js/particles.js"
+              ]
           },
           "configurations": {
             "production": {

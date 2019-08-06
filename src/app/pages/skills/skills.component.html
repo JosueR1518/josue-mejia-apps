@@ -1,0 +1,28 @@
+<div class="arlo_tm_section">
+    <div class="arlo_tm_skills_wrap">
+        <div class="container">
+            <div class="inner_wrap">
+                <div class="leftbox">
+                    <div class="arlo_tm_mini_title_holder">
+                        <h4>Algunas de mis habiliades</h4>
+                    </div>
+                    <p>Con más de 3 años de experiencía  como desarrollador Web, 
+                            He adquirido habiliades y conocimientos suficientes para convertir tus ideas en proyectos reales.</p>
+                </div>
+                <div class="rightbox">
+                    <div class="progress_bar_wrap_total">
+                        <div class="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
+
+
+                            <div class="arlo_tm_progress" [attr.data-value]="hability.number" data-color="#000" *ngFor="let hability of habilities">
+                                <span><span class="label">{{hability.name}} - <span class="experience">{{hability.experience}}</span></span><span class="number">{{hability.number}}%</span></span>
+                                <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
