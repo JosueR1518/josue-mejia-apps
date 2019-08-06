@@ -1,10 +1,11 @@
 <div class="arlo_tm_leftpart_wrap">
     <div class="leftpart_inner">
         <div class="logo_wrap">
-            <a href="#"><img style="width: 50%" src="assets/img/logo/desktop-logo.png" alt="" /></a>
+            <a href="#"><img style="width: 50%" [src]="urlLogo" alt="" /></a>
         </div>
         <div class="menu_list_wrap">
             <ul class="anchor_nav">
+                
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Sobre mi</a></li>
                 <li><a href="#services">Servicios</a></li>
@@ -15,12 +16,11 @@
         </div>
         <div class="leftpart_bottom">
             <div class="social_wrap">
-                <ul>
-                    <li><a href="#"><i class="xcon-facebook"></i></a></li>
-                    <li><a href="#"><i class="xcon-twitter"></i></a></li>
-                    <li><a href="#"><i class="xcon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="xcon-instagram"></i></a></li>
-                    <li><a href="#"><i class="xcon-behance"></i></a></li>
+                <ul *ngIf="socialMedia != null">
+                    <li><a [href]="socialMedia.facebook"><i class="xcon-facebook"></i></a></li>
+                    <li><a [href]="socialMedia.twitter"><i class="xcon-twitter"></i></a></li>
+                    <li><a [href]="socialMedia.linkin"><i class="xcon-linkedin"></i></a></li>
+                    <li><a [href]="socialMedia.intagram"><i class="xcon-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

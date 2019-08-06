@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PageInfoService } from './services/page-info.service';
 
 
 declare var particlesJS: any;
@@ -9,7 +10,7 @@ declare var particlesJS: any;
 })
 export class AppComponent {
   title = 'portafolio-jaml';
-  constructor () {
+  constructor ( private infoPage: PageInfoService) {
 
    
   }

@@ -11,11 +11,11 @@ export class SkillsComponent implements OnInit {
 
   habilities: any[] = [
    {name: 'Angular FrameWork ',
-   experience: '3 años de experiecia',
+   experience: '2 años de experiecia',
    number: '85'
   },
     {name: 'IONIC 4 ',
-    experience: '2 años de experiecia',
+    experience: '10 meses de experiecia',
     number: '80'
   },
   {name: 'HTML, Boostrap 4',
@@ -28,7 +28,7 @@ export class SkillsComponent implements OnInit {
   },
   {name: 'MySql  ',
   experience: '5 años de experiecia',
-  number: '80'
+  number: '90'
   },
   {name: 'SCRUM  ',
   experience: '9 meses de experiecia',

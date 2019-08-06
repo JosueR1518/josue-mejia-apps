@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 	setTimeout(function () {
 
 
-	arlo_tm_hamburger();
+	//arlo_tm_hamburger();
 	arlo_tm_imgtosvg();
 	arlo_tm_magnific_popup();
 	arlo_tm_jarallax();
@@ -55,7 +55,7 @@ jQuery(document).ready(function(){
 
 
 		console.log("carga de eventos");
-	},100);
+	},500);
 	
 });
 
@@ -68,30 +68,6 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 
-// -----------------------------------------------------
-// ---------------  HAMBURGER  -------------------------
-// -----------------------------------------------------
-
-function arlo_tm_hamburger(){
-	
-	"use strict";
-	
-	var hamburger 		= jQuery('.hamburger');
-	var mobileMenu		= jQuery('.arlo_tm_mobile_menu_wrap');
-	
-	hamburger.on('click',function(){
-		var element 	= jQuery(this);
-		
-		if(element.hasClass('is-active')){
-			element.removeClass('is-active');
-			mobileMenu.slideUp();
-		}else{
-			element.addClass('is-active');
-			mobileMenu.slideDown();
-		}
-		return false;
-	});
-}
 
 function arlo_tm_imgtosvg(){
 	

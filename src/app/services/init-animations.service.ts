@@ -17,6 +17,37 @@ export class InitAnimationsService {
 
 
 
+// -----------------------------------------------------
+// ---------------  HAMBURGER  -------------------------
+// -----------------------------------------------------
+
+ arlo_tm_hamburger() {
+
+	'use strict';
+
+	let hamburger 		= jQuery('.hamburger');
+	let mobileMenu		= jQuery('.arlo_tm_mobile_menu_wrap');
+
+	hamburger.on('click', function() {
+		let element 	= jQuery(this);
+
+		if (element.hasClass('is-active')) {
+			element.removeClass('is-active');
+			mobileMenu.slideUp();
+		} else {
+			element.addClass('is-active');
+			mobileMenu.slideDown();
+		}
+
+		return false;
+	});
+}
+
+
+arlo_tm_cerrar_menu() {
+		jQuery('.hamburger').click();
+}
+
 
 
 // -------------------------------------------------
@@ -42,7 +73,10 @@ export class InitAnimationsService {
   arlo_tm_animate_particles() {
 
   particlesJS.load('particles-js', 'assets/data/particles.json');
-  }
+	}
+	
+
+
 
 
 
@@ -59,13 +93,13 @@ export class InitAnimationsService {
 	if (jQuery().isotope) {
 
 		// Needed variables
-		let list 		 = jQuery('.arlo_tm_portfolio_list');
-		let filter		 = jQuery('.arlo_tm_portfolio_filter');
+		const list 		 = jQuery('.arlo_tm_portfolio_list');
+		const filter		 = jQuery('.arlo_tm_portfolio_filter');
 
 		if (filter.length) {
 			// Isotope Filter
 			filter.find('a').on('click', function() {
-				let selector = jQuery(this).attr('data-filter');
+				const selector = jQuery(this).attr('data-filter');
 				list.isotope({
 					filter				: selector,
 					animationOptions	: {
@@ -118,24 +152,24 @@ export class InitAnimationsService {
 
 arlo_tm_progress_wrap() {
 
- function tdProgress(container){
+ function tdProgress(container) {
 
-    "use strict";
-  
+    'use strict';
+
     container.find('.arlo_tm_progress').each(function(i) {
-      var progress 		= jQuery(this);
-      var pValue 			= parseInt(progress.data('value'), 10);
-      var pColor			= progress.data('color');
-      var pBarWrap 		= progress.find('.arlo_tm_bar_wrap');
-      var pBar 			= progress.find('.arlo_tm_bar');
-      pBar.css({width:pValue+'%', backgroundColor:pColor});
-      setTimeout(function(){pBarWrap.addClass('open');},(i*500));
+      let progress 		= jQuery(this);
+      let pValue 			= parseInt(progress.data('value'), 10);
+      let pColor			= progress.data('color');
+      let pBarWrap 		= progress.find('.arlo_tm_bar_wrap');
+      let pBar 			= progress.find('.arlo_tm_bar');
+      pBar.css({width: pValue + '%', backgroundColor: pColor});
+      setTimeout(function() {pBarWrap.addClass('open'); }, (i * 500));
     });
   }
-  jQuery('.arlo_tm_progress_wrap').each(function() {
-    "use strict";
-    var pWrap 			= jQuery(this);
-    pWrap.waypoint({handler: function(){tdProgress(pWrap);},offset:'90%'});	
+ jQuery('.arlo_tm_progress_wrap').each(function() {
+    'use strict';
+    let pWrap 			= jQuery(this);
+    pWrap.waypoint({handler() {tdProgress(pWrap); }, offset: '90%'});
   });
 }
 
