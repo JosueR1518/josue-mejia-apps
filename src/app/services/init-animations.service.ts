@@ -30,7 +30,7 @@ export class InitAnimationsService {
     const animateSpan			= jQuery('.arlo_tm_animation_text_word');
 
     animateSpan.typed({
-        strings: ['Freelancer', 'UI/UX Designer', 'Front-end Developer'],
+        strings: ['Freelancer', 'UI/UX Designer', 'Desarrollador Front-end '],
         loop: true,
         startDelay: 1e3,
         backDelay: 2e3
