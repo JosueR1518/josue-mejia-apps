@@ -11,7 +11,7 @@ export class TestimonialsComponent implements OnInit, AfterViewInit {
 
   phrases: any[] = [
     {
-      phrase: 'Muchas cosas son imporbables, solo unas pocas son imposibles',
+      phrase: 'Muchas cosas son improbables, solo unas pocas son imposibles',
       author: 'Elon Musk / CEO Tesla'
       },
       {
