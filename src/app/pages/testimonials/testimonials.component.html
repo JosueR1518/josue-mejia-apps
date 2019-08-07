@@ -9,42 +9,16 @@
                 <div class="container">
                     <div class="carousel_wrap">
                         <ul class="owl-carousel">
-                            <li class="item">
+                            <li class="item" *ngFor="let p of phrases">
                                 <div class="inner">
                                     <div class="quotebox_wrap">
                                         <i class="xcon-quote-left"></i>
                                     </div>
                                     <div class="definitions_wrap">
-                                        <p>“Arlo team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for works.”</p>
+                                        <p>“{{p.phrase}}”</p>
                                     </div>
                                     <div class="name_holder">
-                                        <p>Antonio Baraley, CEO Founder</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="inner">
-                                    <div class="quotebox_wrap">
-                                        <i class="xcon-quote-left"></i>
-                                    </div>
-                                    <div class="definitions_wrap">
-                                        <p>“We were looking for a logo with a touch of modernism. Arlo grasped our needs and produced a stunning design.”</p>
-                                    </div>
-                                    <div class="name_holder">
-                                        <p>Calena Gomez, AOC Designer</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="inner">
-                                    <div class="quotebox_wrap">
-                                        <i class="xcon-quote-left"></i>
-                                    </div>
-                                    <div class="definitions_wrap">
-                                        <p>“Awesome to work with Arlo. Good organized, easy to communicate with, responsive with next iterations.”</p>
-                                    </div>
-                                    <div class="name_holder">
-                                        <p>Torren Winston, Photographer.</p>
+                                        <p>{{p.author}}</p>
                                     </div>
                                 </div>
                             </li>

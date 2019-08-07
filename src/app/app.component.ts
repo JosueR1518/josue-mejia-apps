@@ -10,7 +10,7 @@ declare var particlesJS: any;
 })
 export class AppComponent {
   title = 'portafolio-jaml';
-  constructor ( private infoPage: PageInfoService) {
+  constructor ( ) {
 
    
   }

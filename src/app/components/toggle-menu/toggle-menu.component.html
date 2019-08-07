@@ -10,17 +10,17 @@
                 <li><a href="#about">Sobre mi</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#news">Blog</a></li>
+               <!--  <li><a href="#news">Blog</a></li> -->
                 <li><a href="#contact">Contactame</a></li>
             </ul>
         </div>
         <div class="leftpart_bottom">
             <div class="social_wrap">
-                <ul *ngIf="socialMedia != null">
-                    <li><a [href]="socialMedia.facebook"><i class="xcon-facebook"></i></a></li>
-                    <li><a [href]="socialMedia.twitter"><i class="xcon-twitter"></i></a></li>
-                    <li><a [href]="socialMedia.linkin"><i class="xcon-linkedin"></i></a></li>
-                    <li><a [href]="socialMedia.intagram"><i class="xcon-instagram"></i></a></li>
+                <ul *ngIf="ps.cargada">
+                    <li><a  target="_blank" [href]="ps.infoPage.social_media.facebook"><i class="xcon-facebook"></i></a></li>
+                    <li><a  target="_blank" [href]="ps.infoPage.social_media.twitter"><i class="xcon-twitter"></i></a></li>
+                    <li><a  target="_blank" [href]="ps.infoPage.social_media.linkin"><i class="xcon-linkedin"></i></a></li>
+                    <li><a  target="_blank" [href]="ps.infoPage.social_media.instagram"><i class="xcon-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

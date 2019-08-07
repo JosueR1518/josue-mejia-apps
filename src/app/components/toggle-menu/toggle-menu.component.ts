@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageInfoService } from '../../services/page-info.service';
+import { Socialmedia } from '../../interfaces/info-page.interface';
 
 @Component({
   selector: 'app-toggle-menu',
@@ -10,11 +11,9 @@ export class ToggleMenuComponent implements OnInit {
 
 
   urlLogo: string = 'assets/img/logo/desktop-logo.png';
-  socialMedia: any = null;
-  constructor(public dataPageService: PageInfoService) {
+  constructor(public ps: PageInfoService) {
 
 
-    this.socialMedia = dataPageService.infoPage.social_media;
   }
 
   ngOnInit() {

@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.initService.arlo_tm_animate_text();
+    const cargos = ['Desarrollador Front-end ', 'Freelancer', 'UI/UX Designer', 'Emprendedor' ];
+
+    this.initService.arlo_tm_animate_text(cargos);
     this.initService.arlo_tm_animate_particles();
   }
 

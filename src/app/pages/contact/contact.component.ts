@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InitAnimationsService } from 'src/app/services/init-animations.service';
+import { PageInfoService } from '../../services/page-info.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +9,9 @@ import { InitAnimationsService } from 'src/app/services/init-animations.service'
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private initService: InitAnimationsService) { }
+  constructor(
+    private initService: InitAnimationsService,
+    public ps: PageInfoService) { }
 
   ngOnInit() {
 

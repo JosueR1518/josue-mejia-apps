@@ -54,14 +54,14 @@ arlo_tm_cerrar_menu() {
 // -------------   ANIMATE TEXT  -------------------
 // -------------------------------------------------
 
-  arlo_tm_animate_text() {
+  arlo_tm_animate_text(strings: string[]) {
 
     'use strict';
 
     const animateSpan			= jQuery('.arlo_tm_animation_text_word');
 
     animateSpan.typed({
-        strings: ['Freelancer', 'UI/UX Designer', 'Desarrollador Front-end '],
+        strings ,
         loop: true,
         startDelay: 1e3,
         backDelay: 2e3
@@ -174,6 +174,51 @@ arlo_tm_progress_wrap() {
 }
 
 
+
+
+arlo_tm_owl_carousel(){
+	
+	"use strict";
+  	var carusel2			= jQuery('.arlo_tm_testimonial_wrap .owl-carousel');
+  	carusel2.owlCarousel({
+		loop:true,
+		autoplay:true,
+		autoWidth: false,
+		nav: false,
+		items:1,
+	});
+}
+
+
+arlo_tm_imgtosvg(){
+	
+	"use strict";
+	
+	jQuery('img.svg').each(function(){
+		
+		var jQueryimg 		= jQuery(this);
+		var imgClass		= jQueryimg.attr('class');
+		var imgURL			= jQueryimg.attr('src');
+
+		jQuery.get(imgURL, function(data) {
+			// Get the SVG tag, ignore the rest
+			var jQuerysvg = jQuery(data).find('svg');
+
+			// Add replaced image's classes to the new SVG
+			if(typeof imgClass !== 'undefined') {
+				jQuerysvg = jQuerysvg.attr('class', imgClass+' replaced-svg');
+			}
+
+			// Remove any invalid XML tags as per http://validator.w3.org
+			jQuerysvg = jQuerysvg.removeAttr('xmlns:a');
+
+			// Replace image with new SVG
+			jQueryimg.replaceWith(jQuerysvg);
+
+		}, 'xml');
+
+	});
+}
 
 
 
