@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 	setTimeout(function () {
 
 
-	arlo_tm_hamburger();
+	//arlo_tm_hamburger();
 	arlo_tm_imgtosvg();
 	arlo_tm_magnific_popup();
 	arlo_tm_jarallax();
@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
 	//arlo_tm_portfolio();
 	arlo_tm_anchor();
 	//arlo_tm_contact_form();
-	arlo_tm_owl_carousel();
+	//arlo_tm_owl_carousel();
 	//arlo_tm_animate_text();
 	//arlo_tm_projects();
 	arlo_tm_miniboxes();
@@ -55,7 +55,7 @@ jQuery(document).ready(function(){
 
 
 		console.log("carga de eventos");
-	},100);
+	},500);
 	
 });
 
@@ -68,30 +68,6 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 
-// -----------------------------------------------------
-// ---------------  HAMBURGER  -------------------------
-// -----------------------------------------------------
-
-function arlo_tm_hamburger(){
-	
-	"use strict";
-	
-	var hamburger 		= jQuery('.hamburger');
-	var mobileMenu		= jQuery('.arlo_tm_mobile_menu_wrap');
-	
-	hamburger.on('click',function(){
-		var element 	= jQuery(this);
-		
-		if(element.hasClass('is-active')){
-			element.removeClass('is-active');
-			mobileMenu.slideUp();
-		}else{
-			element.addClass('is-active');
-			mobileMenu.slideDown();
-		}
-		return false;
-	});
-}
 
 function arlo_tm_imgtosvg(){
 	
@@ -253,11 +229,11 @@ function arlo_tm_owl_carousel(){
 			items: 3,
 			lazyLoad: true,
 			margin: 30,
-			autoplay: false,
+			autoplay: true,
 			autoplayTimeout: 6000,
 			smartSpeed: 2000,
 			dots: true,
-			nav: false,
+			nav: true,
 			navSpeed: true,
 			responsive:{
 			0:{items:1},

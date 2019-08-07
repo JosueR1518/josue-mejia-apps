@@ -1,0 +1,36 @@
+{
+    "titulo":"Josué Mejía",
+    "email": "josue.mejia@gmail.com",
+    "nombre_corto":"Josué",
+    "address":"Col. Libertad, San Salvador, San Salvador, El Salvador",
+    "social_media":{"facebook": "https://www.facebook.com/ALL1518",
+        "twitter": "https://twitter.com/Josue_1518",
+        "instagram": "https://www.instagram.com/mejialopeza",
+        "linkin": "https://www.linkedin.com/in/josu%C3%A9-mej%C3%ADa-12554414a/"},
+    "about_section": {
+        "birthday":"15.11.1992",
+        "city":"San Salvador, El Salvador",
+        "study":"Universidad de El Salvador",
+        "website":"www.josue-mejia.com",
+        "phone":"+503 7524 9389",
+        "age":"",
+        "interests":"Bussines, Machine Learning, IA",
+        "degree":"Ingeniero de Sistemas Informáticos",
+        "mail":"josue.mejia@gmail.com",
+        "twitter":"https://twitter.com/Josue_1518"
+
+                         },
+
+    "skills_section": {
+        "desc1":"15.11.1992",
+        "desc2":"San Salvador, El Salvador",
+        "habilities": {}
+
+                         },
+
+    "services_section": {
+        "services": {}
+
+                         }
+
+}
