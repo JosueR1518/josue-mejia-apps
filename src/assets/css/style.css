@@ -990,10 +990,10 @@ img.svg{
 			box-sizing: border-box; /* Opera/IE 8+ */ 
 }
 .arlo_tm_services_wrap .list_wrap ul li .inner:hover{top: -5px;}
-.arlo_tm_services_wrap .list_wrap ul li .icon{margin-bottom: 21px;}
+.arlo_tm_services_wrap .list_wrap ul li .icon{margin-bottom: 10px;}
 .arlo_tm_services_wrap .list_wrap ul li .icon .svg{
-	width: 40px;
-	height: 40px;
+	width: 80px;
+	height: 80px;
 	color: #E3872D;
 }
 .arlo_tm_services_wrap .list_wrap ul li .title_service{margin-bottom: 17px;}
@@ -1168,26 +1168,29 @@ img.svg{
   font-size: 20px;
   font-weight: 700;
   padding: 5px 15px;
-  color: #000000;
+  color: #041230;
   position: fixed;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
+  border-radius: 5px;
+  
 }
 .arlo_tm_portfolio_titles.visible {
   opacity: 1;
   visibility: visible;
 }
 .arlo_tm_portfolio_titles .work__cat {
-  position: absolute;
+  position: relative;
   background: #ffffff;
   top: 100%;
   left: 0;
   margin-top: -5px;
   font-family: "Montserrat";
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   padding: 5px 15px;
+  border-radius: 5px;
 }
 .entry{position: relative;}
 .arlo_tm_portfolio_image_main{

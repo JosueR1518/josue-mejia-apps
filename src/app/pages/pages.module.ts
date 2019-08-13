@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
+import { MainComponent } from './main/main.component';
 import { ComponentsModule } from '../components/components.module';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -9,11 +9,16 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { PortfolioSingleComponent } from './portfolio-single/portfolio-single.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { HomeComponent } from './home/home.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
 @NgModule({
   declarations: [
+    MainComponent,
     HomeComponent,
     AboutComponent,
     SkillsComponent,
@@ -21,10 +26,13 @@ import { ContactComponent } from './contact/contact.component';
     PortafolioComponent,
     TestimonialsComponent,
     BlogComponent,
-    ContactComponent],
+    ContactComponent,
+    PortfolioSingleComponent],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    AppRoutingModule,
+    NgbModule
   ],
   exports: [
     HomeComponent,

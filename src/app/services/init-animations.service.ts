@@ -128,8 +128,9 @@ arlo_tm_cerrar_menu() {
 	jQuery('.arlo_tm_portfolio_animation_wrap').each(function() {
 		jQuery(this).on('mouseenter', function() {
 			if (jQuery(this).data('title')) {
-				jQuery('.arlo_tm_portfolio_titles').html(jQuery(this).data('title') + '<span class="work__cat">' + jQuery(this).data('category') + '</span>');
+				jQuery('.arlo_tm_portfolio_titles').html(jQuery(this).data('title') + ' /<span class="work__cat">' + jQuery(this).data('category') + '</span>');
 				jQuery('.arlo_tm_portfolio_titles').addClass('visible');
+				jQuery(this).addClass('sobresalir');
 			}
 
 			jQuery(document).on('mousemove', function(e) {
@@ -139,7 +140,8 @@ arlo_tm_cerrar_menu() {
 				});
 			});
 		}).on('mouseleave', function() {
-			jQuery('.arlo_tm_portfolio_titles').removeClass('visible');
+			 jQuery('.arlo_tm_portfolio_titles').removeClass('visible');
+			 jQuery(this).removeClass('sobresalir');
 		});
 	});
 }
@@ -273,4 +275,35 @@ arlo_animation_remove_loader() {
     jQuery('.arlo_tm_preloader').addClass('loaded');
 }, 1000);
 }
+
+
+
+arlo_tm_slide_projects(startPosition: number){
+
+	jQuery('.owl-carousel-projects').owlCarousel({
+		loop:true,
+		autoplay:false,
+		autoWidth: false,
+		nav: true,
+		items:1,
+		startPosition
+	});
+}
+
+
+
+arlo_tm_data_images(){
+	
+	"use strict";
+	
+	var data			= jQuery('*[data-img-url]');
+	
+	data.each(function(){
+		var element			= jQuery(this);
+		var url				= element.data('img-url');
+		element.css({backgroundImage: 'url('+url+')'});
+	});
+}
+
+
 }

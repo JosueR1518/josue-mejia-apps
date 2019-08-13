@@ -1,8 +1,8 @@
 <div class="arlo_tm_about_wrapper_all">
     <div class="container">
         <div class="arlo_tm_title_holder">
-            <h3>Sobre mi</h3>
-            <span>Información principal</span>
+            <h3>About Me</h3>
+            <span>Main Information about me</span>
         </div>
         <div class="arlo_tm_about_wrap">
             <div class="author_wrap">
@@ -24,8 +24,8 @@
                     </div>
                     <div class="definition">
                         <p style=" text-align: justify;
-                        text-justify: inter-word;">Hola! Mi nombre es  <strong>Josué Alexander Mejía López</strong>. 
-                            Soy desarrollador de aplicaciones Web, me encantan las tecnologías innovadoras de desarrollo Web y la forma en que estas pueden 
+                        text-justify: inter-word;">Hi! My name is  <strong>Josué Alexander Mejía López</strong>. 
+                            I'm a Web Developer, me encantan las tecnologías innovadoras de desarrollo Web y la forma en que estas pueden 
                             seguir transformando nuestra realidad. Es interesante aprender cosas nuevas, constantemente soy entusiasta 
                             del autoaprendizaje de forma online <!-- como una forma bastante efectiva de compartir conocimientos -->.
                              Cualquier objetivo es posible, con voluntad y un poco de esfuerzo se pueden crear cosas geniales que impacten en nuestra realidad.
@@ -35,44 +35,44 @@
                     <div class="about_short_contact_wrap">
                         <ul>
                             <li>
-                                <span><label>Nacimiento:</label> 15.11.1992</span>
+                                <span><label>birthday:</label> {{ps.infoPage.about_section?.birthday}}</span>
+                            </li> 
+                            <li>
+                                <span><label>Age:</label> {{age}}</span>
                             </li>
                             <li>
-                                <span><label>Edad:</label> 26</span>
+                                <span><label>City:</label> {{ps.infoPage.about_section?.city}}</span>
                             </li>
                             <li>
-                                <span><label>Ciudad:</label> San Salvador, El Salvador</span>
+                                <span><label>Interests:</label> Machine Learning, IA, Bussines</span>
                             </li>
                             <li>
-                                <span><label>Intereses:</label> Machine Learning, IA, Bussines</span>
+                                <span><label>Study:</label> <a target="_blank" href="https://www.ues.edu.sv/">{{ps.infoPage.about_section?.study}}(UES)</a></span>
                             </li>
                             <li>
-                                <span><label>Estudios:</label> <a target="_blank" href="https://www.ues.edu.sv/">Universidad de El Salvador (UES)</a></span>
-                            </li>
-                            <li>
-                                <span><label>Título:</label> Ingeniero de Sistemas Informáticos</span>
+                                <span><label>Degree:</label> {{ps.infoPage.about_section?.degree}}</span>
                             </li>	
-                            <li>
+                           <!--  <li>
                                 <span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
+                            </li> -->
+                            <li>
+                                <span><label>Mail:</label> <a href="mailto:{{ps.infoPage.about_section?.mail}}">{{ps.infoPage.about_section?.mail}}</a></span>
                             </li>
                             <li>
-                                <span><label>Correo:</label> <a href="mailto:example@gmail.com">josue.mejia&#64;gmail.com</a></span>
+                                <span><label>Phone:</label> <a href="#">{{ps.infoPage.about_section?.phone}}</a></span>
                             </li>
-                            <li>
-                                <span><label>Teléfono:</label> <a href="#">+503 7524 9389</a></span>
-                            </li>
-                            <li>
-                                <span><label>Twitter:</label> <a href="https://twitter.com/Josue_1518" target="_blank">&#64;Josue_1518</a></span>
-                            </li>
+                           <!--  <li>
+                                <span><label>Twitter:</label> <a [href]="ps.infoPage.social_media?.twitter" target="_blank">&#64;Josue_1518</a></span>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="buttons_wrap">
-                        <ul>
+                        <ul><!-- 
                             <li>
                                 <a href="index.html"><span>Descargar CV</span></a>
-                            </li>
+                            </li> -->
                             <li class="anchor">
-                                <a href="#contact"><span>Enviar mensaje</span></a>
+                                <a href="#contact"><span>Send message</span></a>
                             </li>
                         </ul>
                     </div>

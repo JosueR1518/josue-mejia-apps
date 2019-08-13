@@ -8,33 +8,38 @@ import { PortfolioService } from '../../services/portfolio.service';
   styleUrls: ['./portafolio.component.css']
 })
 export class PortafolioComponent implements OnInit, AfterViewInit {
- 
 
 
-  portfolio: any[] = [];
+
+   portfolio: Array<any> = [];
   categories: any[] = [
-    {title: 'Diseño', name: 'design'},
-    {title: 'Desarrollo Web', name: 'development'},
-    {title: 'Gestión IT', name: 'management'} ];
+    {title: 'Design', name: 'design'},
+    {title: 'Web Develoment', name: 'development'},
+    {title: 'IT management', name: 'management'} ];
 
   constructor(
     private initService: InitAnimationsService,
     private portafolioService: PortfolioService) { }
 
   ngOnInit() {
-/* 
-    this.portafolioService.getPortfolio().subscribe( (data: any[]) => {
+
+    this.portafolioService.getPortfolio().then( (projects: any[]) => {
 
 
-      this.portfolio = data;
-    }); */
+      this.portfolio = projects;
+
+
+      console.log(projects);
+    });
 
 
 
   }
   ngAfterViewInit(): void {
     this.initService.arlo_tm_portfolio();
-    this.initService.arlo_tm_projects();
+
+    setTimeout(() => this.initService.arlo_tm_projects(), 1000);
+
   }
 
 }

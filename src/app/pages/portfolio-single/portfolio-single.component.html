@@ -1,0 +1,68 @@
+<div class="arlo_tm_portfolio_single_wrap">
+    <div class="container">
+
+                    <div class="title_holder">
+                            <h3>{{project.title}}</h3>
+                        </div>
+                        <div class="details_wrap">
+                            <div class="leftbox">
+                                <div class="name_holder">
+                                    <h3>Project Details</h3>
+                                </div>
+                                <div class="short_list">
+                                    <ul>
+                                        <li>
+                                            <span class="first">Category :</span>
+                                            <span class="second">{{project.category}}</span>
+                                        </li>
+                                        <li *ngIf="project.client">
+                                            <span class="first">Client :</span>
+                                            <span class="second">{{project.client}}</span>
+                                        </li>
+                                        <!-- <li>
+                                            <span class="first">Images by :</span>
+                                            <span class="second"></span>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="rightbox">
+                                <p>{{project.description}}</p>
+                            </div>
+                        </div>
+                        <div class="images_list">
+                            <ul>
+                                <li *ngFor="let photo of project.photos">
+                                    <img [src]="photo" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="carouselExampleInterval" class="carousel slide" >
+                                <div class="carousel-inner">
+                                  <div *ngFor="let photo of project.photos" class="carousel-item " data-interval="10000">
+                                    <img [src]="photo" class="d-block w-100" alt="...">
+                                  </div>
+                                 
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
+                     <!--    <div class="pagination_wrap">
+                            <div class="prev">
+                                <a [routerLink]="['project',pr]" routerLinkActive="router-link-active" ="#">Prev</a>
+                            </div>
+                            <div class="next">
+                                <a href="#">Next</a>
+                            </div>
+                        </div> -->
+            </div>
+
+        </div>
+      

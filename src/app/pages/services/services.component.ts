@@ -7,52 +7,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  pathImg = 'assets/img/svg/';
+  pathImg = 'assets/img/svg/flaticon/';
   services: any[] = [
     {
-    icon: this.pathImg + 'new-tab.svg',
-    title: 'Apps Web',
+    icon: this.pathImg + 'coding.svg',
+    title: 'Web Apps ',
     desc: ''
   },
   {
-    icon: this.pathImg + 'envelope.svg',
-    title: 'Apps móviles',
+    icon: this.pathImg + 'smartphone-with-internet.svg',
+    title: 'Mobile Apps ',
     desc: ''
   },
   {
-    icon: this.pathImg + 'new-tab.svg',
-    title: 'Sitios Web',
+    icon: this.pathImg + 'layout.svg',
+    title: 'Websites',
     desc: ''
   },
   {
-    icon: this.pathImg + 'layers.svg',
-    title: 'Alojamiento Web',
+    icon: this.pathImg + 'domain.svg',
+    title: 'Web Hosting',
     desc: ''
   },
 
   {
-    icon: this.pathImg + 'new-tab.svg',
-    title: 'Diseño Responsivo',
+    icon: this.pathImg + 'responsive.svg',
+    title: 'Responsive Design',
     desc: ''
   },
   {
-    icon: this.pathImg + 'new-tab.svg',
-    title: 'Gestión de proyectos IT',
+    icon: this.pathImg + 'growth.svg',
+    title: 'IT project management',
     desc: ''
   },
   {
-    icon: this.pathImg + 'camera-diaphragm.svg',
-    title: 'Suite empresarial ',
+    icon: this.pathImg + 'success.svg',
+    title: 'Business suite ',
     desc: ''
   },
   {
-    icon: this.pathImg + 'camera-diaphragm.svg',
-    title: 'Soporte Técnico ',
+    icon: this.pathImg + 'chat.svg',
+    title: 'Technical support',
     desc: ''
   },
   {
-    icon: this.pathImg + 'camera-diaphragm.svg',
-    title: 'Sistemas de Videovigilancia',
+    icon: this.pathImg + 'cctv.svg',
+    title: 'Video Surveillance Systems',
     desc: ''
   },
 ];

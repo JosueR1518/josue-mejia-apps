@@ -1,6 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { InitAnimationsService } from '../../services/init-animations.service';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,28 +7,9 @@ import { InitAnimationsService } from '../../services/init-animations.service';
 })
 export class HomeComponent implements OnInit {
 
-
-
-
-  constructor(private initService: InitAnimationsService) {}
+  constructor() { }
 
   ngOnInit() {
-
-    const cargos = ['Desarrollador Front-end ', 'Freelancer', 'UI/UX Designer', 'Emprendedor' ];
-
-    this.initService.arlo_tm_animate_text(cargos);
-    this.initService.arlo_tm_animate_particles();
   }
-
-
-
-
-
-
-
-
-
-
-
 
 }
