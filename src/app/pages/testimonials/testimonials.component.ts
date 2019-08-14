@@ -7,19 +7,18 @@ import { InitAnimationsService } from 'src/app/services/init-animations.service'
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit, AfterViewInit {
-  
 
   phrases: any[] = [
     {
-      phrase: 'Muchas cosas son improbables, solo unas pocas son imposibles',
+      phrase: 'Many things are unlikely, only a few are impossible',
       author: 'Elon Musk / CEO Tesla'
       },
       {
-        phrase: 'Todos necesitamos personas que nos retroalimenten. Así es como mejoramos',
+        phrase: 'We all need people to give us feedback. This is how we improve',
         author: 'Bill Gates / Founder Microsoft'
         },
       {
-        phrase: 'Nunca pares de aprender',
+        phrase: 'Never stop learning',
         author: 'Freddy Vega / CEO Platzi'
         }
   ];
