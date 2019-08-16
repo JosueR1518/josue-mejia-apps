@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
 
-    const cargos = ['Web Developer', 'Front-end Developer ', 'UI/UX Designer' ];
+    const cargos = ['Entrepreneur', 'Front-end Developer ', 'UI Designer' ];
 
     this.initService.arlo_tm_animate_text(cargos);
     this.initService.arlo_tm_animate_particles();

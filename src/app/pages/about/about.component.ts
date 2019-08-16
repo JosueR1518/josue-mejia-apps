@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
 
    const dt1 = new Date(1992, 11, 15);
    const dt2 = new Date();
-   this.age = this.diff_years(dt2, dt1);
+   this.age = this.diff_years(dt2, dt1)-1;
   }
 
 

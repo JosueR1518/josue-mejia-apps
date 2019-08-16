@@ -4,19 +4,20 @@ import { ActivatedRoute } from '@angular/router';
 import { InitAnimationsService } from '../../services/init-animations.service';
 
 
-declare var $:any;
+declare var $: any;
 @Component({
   selector: 'app-portfolio-single',
   templateUrl: './portfolio-single.component.html',
   styleUrls: ['./portfolio-single.component.css']
 })
 export class PortfolioSingleComponent implements OnInit {
-  
+
 
   project: any = [];
-  //projects: any[] = [];
- // id: number;
-  //startPosition: number =0;
+  projects: any[] = [];
+  id: number;
+  slidePosition = 0;
+  loading = true;
   constructor(
     private ps: PortfolioService,
     private activatedRoute: ActivatedRoute,
@@ -27,16 +28,16 @@ export class PortfolioSingleComponent implements OnInit {
 
       this.activatedRoute.params.subscribe( params => {
 
-             // this.id = params.id;
+              this.id = params.id;
               this.ps.getProject(params.id).then( data => {
                 this.project = data;
-/* 
+
 
                 this.ps.getPortfolio().then((resp: any[]) => {
 
                 this.projects = resp;
                 this.makeCarusel(this.projects, this.id);
-              }); */
+              });
               });
       });
 
@@ -55,21 +56,51 @@ export class PortfolioSingleComponent implements OnInit {
 
   private makeCarusel(data: any[], index: number) {
 
-      let startPosition = 0;
       for (let i = 0; i < data.length ; i++) {
               if (data[i].id === index) {
-                startPosition = i;
+                this.slidePosition = i;
                 i = data.length;
               }
           }
 
-        //  this.startPosition = startPosition;
-      console.log(startPosition);
-     
+      this.loading = false;
+  }
 
 
+  next() {
+
+    this.loading = true;
+
+    if (this.slidePosition === (this.projects.length - 1) ) {
+      this.slidePosition = 0;
+    } else {
+      this.slidePosition++;
+    }
+
+    this.selectProject();
+  }
+  prev() {
+
+    this.loading = true;
+
+    if (this.slidePosition === 0 ) {
+      this.slidePosition = this.projects.length - 1 ;
+    } else {
+      this.slidePosition--;
+    }
+
+    this.selectProject();
+
+  }
 
 
+  private selectProject() {
+
+    this.project = this.projects[this.slidePosition];
+
+    setTimeout( () => {
+      this.loading = false;
+    }, 300);
   }
 
 }
