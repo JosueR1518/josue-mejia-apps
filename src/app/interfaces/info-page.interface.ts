@@ -7,6 +7,7 @@
     about_section?: Aboutsection;
     skills_section?: Skillssection;
     services_section?: Servicessection;
+    cargos?: string[];
   }
 
 interface Servicessection {

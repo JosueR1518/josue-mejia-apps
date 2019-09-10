@@ -31,6 +31,7 @@
     "services_section": {
         "services": {}
 
-                         }
+                         },
+    "cargos": [ "IT Consultant", "Full Stack Developer | Angular Framework|Spring Framework | MySQL | ORACLE ", "UI Designer", "Entrepreneur" ]
 
 }
